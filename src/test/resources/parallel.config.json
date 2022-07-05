@@ -1,0 +1,41 @@
+{
+  "commoncapabilities": {
+    "isRealMobile": true,
+    "visual": true,
+    "console": true,
+    "devicelog":true
+  },
+  "deviceAndBuildCaps": [ {
+    "build": "Lambdatest-build-1",
+    "name": "Test 1",
+    "platformName": "ANDROID",
+    "platformVersion": "11",
+    "deviceName": "Pixel 5",
+    "app": "lt://APP10160531401656858205144100"
+  },
+    {
+      "build": "Lambdatest-build-2",
+      "name": "Test 2",
+      "platformName": "ANDROID",
+      "platformVersion": "10",
+      "deviceName": "Galaxy S9 Plus",
+      "app": "lt://APP10160531401656858205144100"
+    },
+    {
+      "build": "Lambdatest-build-3",
+      "name": "Test 3",
+      "platformName": "IOS",
+      "platformVersion": "14",
+      "deviceName": "iPhone 12 Pro",
+      "app": "lt://APP10160531401656858016024831"
+    },
+    {
+      "build": "Lambdatest-build-4",
+      "name": "Test 4",
+      "platformName": "IOS",
+      "platformVersion": "14",
+      "deviceName": "iPhone 11",
+      "app": "lt://APP10160531401656858016024831"
+    }
+  ]
+}

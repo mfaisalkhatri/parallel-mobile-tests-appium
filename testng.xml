@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Lambda tests Mobile automation test suite" parallel="tests" thread-count="4">
+    <test name="Proverbial app - Android Mobile Automation on Pixel 5">
+        <parameter name="capabilityIndex" value="0"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.mobileautomation.tests.AndroidTests">
+                <methods>
+                    <include name="textTests"/>
+                    <include name="notificationTest"/>
+                    <include name="toastMessageTest"/>
+                    <include name="geoLocationTest"/>
+                    <include name="speedTestPageTest"/>
+                    <include name="browserTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Proverbial app - Android Mobile Automation on Galaxy S9+">
+        <parameter name="capabilityIndex" value="1"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.mobileautomation.tests.AndroidTests">
+                <methods>
+                    <include name="textTests"/>
+                    <include name="notificationTest"/>
+                    <include name="toastMessageTest"/>
+                    <include name="geoLocationTest"/>
+                    <include name="speedTestPageTest"/>
+                    <include name="browserTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Proverbial app - iOS Mobile Automation on iPhone 12 Pro ">
+        <parameter name="capabilityIndex" value="2"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.mobileautomation.tests.IOSTests">
+                <methods>
+                    <include name="textTests"/>
+                    <include name="notificationTest"/>
+                    <include name="toastMessageTest"/>
+                    <include name="geoLocationTest"/>
+                    <include name="speedTestPageTest"/>
+                    <include name="browserTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Proverbial app - iOS Mobile Automation on iPhone 11">
+        <parameter name="capabilityIndex" value="3"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.mobileautomation.tests.IOSTests">
+                <methods>
+                    <include name="textTests"/>
+                    <include name="notificationTest"/>
+                    <include name="toastMessageTest"/>
+                    <include name="geoLocationTest"/>
+                    <include name="speedTestPageTest"/>
+                    <include name="browserTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
