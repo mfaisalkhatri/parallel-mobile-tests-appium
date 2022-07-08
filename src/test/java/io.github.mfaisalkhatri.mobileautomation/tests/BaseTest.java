@@ -5,20 +5,22 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-
 public class BaseTest {
 
     protected DriverManager driverManager;
 
-    @Parameters({"capabilityIndex"})
-    @BeforeClass(alwaysRun = true)
-    public void setupTest (int capabilityIndex) {
-        driverManager =  DriverManager.builder ().capsIndex (capabilityIndex)
-            .build ().createRemoteDriver ();
+    @Parameters ("deviceId")
+    @BeforeClass (alwaysRun = true)
+    public void setupTest (final String deviceId) {
+        this.driverManager = DriverManager.builder ()
+            .deviceId (deviceId)
+            .build ()
+            .createRemoteDriver ();
 
     }
-    @AfterClass(alwaysRun = true)
+
+    @AfterClass (alwaysRun = true)
     public void tearDown () {
-        driverManager.quitDriver ();
+        this.driverManager.quitDriver ();
     }
 }
