@@ -26,7 +26,7 @@ public class IOSTests extends BaseTest {
         clickOn (homePage.textBtn ());
         assertEquals (homePage.getText (), "Proverbial");
     }
-
+    
     @Test
     public void notificationTest () {
         clickOn (homePage.notificationBtn ());

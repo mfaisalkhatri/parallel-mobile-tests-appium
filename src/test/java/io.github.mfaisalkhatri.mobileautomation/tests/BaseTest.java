@@ -16,7 +16,6 @@ public class BaseTest {
             .deviceId (deviceId)
             .build ()
             .createRemoteDriver ();
-
     }
 
     @AfterClass (alwaysRun = true)

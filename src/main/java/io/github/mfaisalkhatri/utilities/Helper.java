@@ -12,7 +12,7 @@ public class Helper {
         this.driverManager = driverManager;
     }
 
-    public static void clickOn(MobileElement element) {
+    public static void clickOn (final MobileElement element) {
         element.click ();
     }
 
@@ -20,4 +20,5 @@ public class Helper {
     public static void waitForsomeTime () {
         Thread.sleep (2000);
     }
+
 }

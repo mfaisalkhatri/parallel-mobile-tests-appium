@@ -15,7 +15,7 @@ public class HomePage {
         this.driverManager = driverManager;
         wait = new WebDriverWait (driverManager.getDriver (), 20);
     }
-
+    
     public MobileElement textBtn () {
         return driverManager.getDriver ()
             .findElement (MobileBy.id ("Text"));
@@ -27,32 +27,39 @@ public class HomePage {
             .getText ();
     }
 
-    public MobileElement notificationBtn() {
-        return driverManager.getDriver ().findElement (MobileBy.id ("notification"));
+    public MobileElement notificationBtn () {
+        return driverManager.getDriver ()
+            .findElement (MobileBy.id ("notification"));
     }
 
-    public MobileElement notificationBar() {
-        return driverManager.getDriver ().findElement (MobileBy.id ("action_bar"));
+    public MobileElement notificationBar () {
+        return driverManager.getDriver ()
+            .findElement (MobileBy.id ("action_bar"));
     }
 
-    public MobileElement toastBtn() {
-        return driverManager.getDriver ().findElement (MobileBy.id ("toast"));
+    public MobileElement toastBtn () {
+        return driverManager.getDriver ()
+            .findElement (MobileBy.id ("toast"));
     }
 
     public String toastMessage () {
-        return wait.until (ExpectedConditions.presenceOfElementLocated (MobileBy.xpath ("//android.widget.Toast[1]"))).getText ();
+        return wait.until (ExpectedConditions.presenceOfElementLocated (MobileBy.xpath ("//android.widget.Toast[1]")))
+            .getText ();
     }
 
-    public MobileElement geoLocationBtn() {
-        return driverManager.getDriver ().findElement (MobileBy.id ("geoLocation"));
+    public MobileElement geoLocationBtn () {
+        return driverManager.getDriver ()
+            .findElement (MobileBy.id ("geoLocation"));
     }
 
     public MobileElement speedtTestBtn () {
-        return driverManager.getDriver ().findElement (MobileBy.id ("speedTest"));
+        return driverManager.getDriver ()
+            .findElement (MobileBy.id ("speedTest"));
     }
 
     public MobileElement browserMenu () {
-        return driverManager.getDriver ().findElement (MobileBy.AccessibilityId ("Browser"));
+        return driverManager.getDriver ()
+            .findElement (MobileBy.AccessibilityId ("Browser"));
     }
 
 }
