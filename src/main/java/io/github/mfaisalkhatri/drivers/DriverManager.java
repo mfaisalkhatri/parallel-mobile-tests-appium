@@ -31,6 +31,8 @@ public class DriverManager {
 
     @SneakyThrows
     public DriverManager createRemoteDriver () {
+        LOGGER.info ("Creating the driver...");
+        LOGGER.info ("Setting the capabilities..." + capabilities ());
         DRIVER.set (new AppiumDriver<> (new URL (
             format ("https://{0}:{1}{2}", DriverManager.LT_USERNAME, DriverManager.LT_ACCESS_TOKEN,
                 DriverManager.GRID_URL)), capabilities ()));
