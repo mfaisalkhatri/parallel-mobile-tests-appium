@@ -10,7 +10,7 @@ public class GeoLocationPage {
 
     private DriverManager driverManager;
     private WebDriverWait wait;
-
+    
     public GeoLocationPage (final DriverManager driverManager) {
         this.driverManager = driverManager;
         wait = new WebDriverWait (driverManager.getDriver (), 30);

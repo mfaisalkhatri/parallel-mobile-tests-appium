@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,13 +13,16 @@
         <maven.compiler.target>11</maven.compiler.target>
         <java.release.version>11</java.release.version>
         <testng-version>7.6.0</testng-version>
-        <jackson-databind-version>2.13.3 </jackson-databind-version>
+        <jackson-databind-version>2.13.3</jackson-databind-version>
         <appium-java-version>7.6.0</appium-java-version>
         <suite-xml>testng.xml</suite-xml>
         <maven.source.encoding>UTF-8</maven.source.encoding>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <surefire-version>3.0.0-M5</surefire-version>
         <argLine>-Dfile.encoding=UTF-8 -Xdebug -Xnoagent</argLine>
+        <lombok-version>1.18.24</lombok-version>
+        <log4j-core-version>2.18.0</log4j-core-version>
+        <log4j-api-version>2.18.0</log4j-api-version>
     </properties>
 
     <dependencies>
@@ -46,9 +49,21 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>${lombok-version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j-core-version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j-api-version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

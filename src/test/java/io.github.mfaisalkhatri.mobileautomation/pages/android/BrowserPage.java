@@ -10,7 +10,7 @@ import io.github.mfaisalkhatri.drivers.DriverManager;
 public class BrowserPage {
 
     private DriverManager driverManager;
-
+    
     public BrowserPage (final DriverManager driverManager) {
         this.driverManager = driverManager;
     }

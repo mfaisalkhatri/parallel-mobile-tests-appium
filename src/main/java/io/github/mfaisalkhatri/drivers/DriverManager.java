@@ -14,6 +14,8 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import lombok.Builder;
 import lombok.SneakyThrows;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 @Builder
@@ -21,32 +23,34 @@ public class DriverManager {
 
     private static final ThreadLocal<AppiumDriver<MobileElement>> DRIVER          = new ThreadLocal<> ();
     private static final String                                   GRID_URL        = "@mobile-hub.lambdatest.com/wd/hub";
+    private static final Logger                                   LOGGER          = LogManager.getLogger (
+        "DriverManager.class");
     private static final String                                   LT_ACCESS_TOKEN = System.getenv ("token");
     private static final String                                   LT_USERNAME     = System.getenv ("username");
     private              String                                   deviceId;
 
     @SneakyThrows
     public DriverManager createRemoteDriver () {
-        System.out.println (capabilities ());
-        DRIVER.set (new AppiumDriver<> (new URL (format ("https://{0}:{1}{2}", LT_USERNAME, LT_ACCESS_TOKEN, GRID_URL)),
-            capabilities ()));
-
+        DRIVER.set (new AppiumDriver<> (new URL (
+            format ("https://{0}:{1}{2}", DriverManager.LT_USERNAME, DriverManager.LT_ACCESS_TOKEN,
+                DriverManager.GRID_URL)), capabilities ()));
         setupDriverTimeouts ();
         return this;
     }
 
     @SuppressWarnings ("unchecked")
     public <D extends AppiumDriver<MobileElement>> D getDriver () {
-        if (null == DRIVER.get ()) {
+        if (null == DriverManager.DRIVER.get ()) {
             createRemoteDriver ();
         }
-        return (D) DRIVER.get ();
+        return (D) DriverManager.DRIVER.get ();
     }
 
     public void quitDriver () {
-        if (null != DRIVER.get ()) {
+        if (null != DriverManager.DRIVER.get ()) {
+            LOGGER.info ("Closing the driver...");
             getDriver ().quit ();
-            DRIVER.remove ();
+            DriverManager.DRIVER.remove ();
         }
     }
 
@@ -85,7 +89,7 @@ public class DriverManager {
                     capabilities.setCapability (commonCapsfieldName, commonCapsfieldValue);
                 });
         } catch (final IOException e) {
-            e.printStackTrace ();
+            LOGGER.error ("Error reading the config json file", e);
         }
         return capabilities;
     }

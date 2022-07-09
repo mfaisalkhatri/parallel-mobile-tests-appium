@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class AndroidTests extends BaseTest {
 
     private HomePage homePage;
-
+    
     @BeforeClass
     public void androidSetupTest () {
         homePage = new HomePage (driverManager);
