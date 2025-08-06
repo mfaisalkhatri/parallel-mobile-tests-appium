@@ -2,6 +2,8 @@ package io.github.mfaisalkhatri.mobileautomation.pages.ios;
 
 import static io.github.mfaisalkhatri.mobileautomation.utilities.Helper.clickOn;
 
+import java.time.Duration;
+
 import io.appium.java_client.AppiumBy;
 import io.github.mfaisalkhatri.mobileautomation.drivers.DriverManager;
 import org.openqa.selenium.WebElement;
@@ -15,7 +17,7 @@ public class GeoLocationPage {
 
     public GeoLocationPage (final DriverManager driverManager) {
         this.driverManager = driverManager;
-        this.wait = new WebDriverWait (driverManager.getDriver (), 30);
+        this.wait = new WebDriverWait (driverManager.getDriver (), Duration.ofSeconds (20));
     }
 
     public WebElement backBtn () {

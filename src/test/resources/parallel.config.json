@@ -11,36 +11,36 @@
       "build": "Lambdatest-build-1",
       "name": "Test 1",
       "platformName": "ANDROID",
-      "platformVersion": "11",
-      "deviceName": "Pixel 5",
-      "app": "lt://APP10160531401656858205144100"
+      "platformVersion": "14",
+      "deviceName": "Pixel 9",
+      "app": "lt://APP10160341071754500059009313"
     },
     {
       "id": "2",
       "build": "Lambdatest-build-2",
       "name": "Test 2",
       "platformName": "Android",
-      "platformVersion": "10",
-      "deviceName": "Galaxy S9 Plus",
-      "app": "lt://APP100202361654940601090911"
+      "platformVersion": "13",
+      "deviceName": "Galaxy S23 Ultra",
+      "app": "lt://APP10160341071754500059009313"
     },
     {
       "id": "3",
       "build": "Lambdatest-build-3",
       "name": "Test 3",
       "platformName": "IOS",
-      "platformVersion": "14",
-      "deviceName": "iPhone 12 Pro",
-      "app": "lt://APP10160531401656858016024831"
+      "platformVersion": "16",
+      "deviceName": "iPhone 14",
+      "app": "lt://APP10160572041754484509392451"
     },
     {
       "id": "4",
       "build": "Lambdatest-build-4",
       "name": "Test 4",
       "platformName": "IOS",
-      "platformVersion": "14",
-      "deviceName": "iPhone 11",
-      "app": "lt://APP10160531401656858016024831"
+      "platformVersion": "18",
+      "deviceName": "iPhone 16",
+      "app": "lt://APP10160572041754484509392451"
     }
   ]
 }

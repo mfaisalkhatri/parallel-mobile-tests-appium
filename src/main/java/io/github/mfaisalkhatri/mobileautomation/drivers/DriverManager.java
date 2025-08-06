@@ -23,8 +23,8 @@ public class DriverManager {
     private static final ThreadLocal<AppiumDriver> DRIVER          = new ThreadLocal<> ();
     private static final String                    GRID_URL        = "@mobile-hub.lambdatest.com/wd/hub";
     private static final Logger                    LOGGER          = LogManager.getLogger ("DriverManager.class");
-    private static final String                    LT_ACCESS_TOKEN = System.getenv ("token");
-    private static final String                    LT_USERNAME     = System.getenv ("username");
+    private static final String                    LT_ACCESS_TOKEN = System.getenv ("ACCESSTOKEN");
+    private static final String                    LT_USERNAME     = System.getenv ("USERNAME");
     private              String                    deviceId;
 
     @SneakyThrows

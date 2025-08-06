@@ -64,5 +64,4 @@ public class HomePage {
                 AppiumBy.xpath ("//*[contains(@label, 'Toast should be visible')]")))
             .getText ();
     }
-
 }

@@ -4,11 +4,12 @@
 
 - This repo contains automation tests of Proverbial mobile app for iOS and Android built in react-native
   by [LambdaTest](https://www.lambdatest.com/)
-- Appium framework is used to write the mobile automation tests.
+- [Appium](https://appium.io/docs/en/latest/) framework is used to write the mobile automation tests.
 - This repo uses Maven as build tool and TestNG testing framework to run the tests.
 - This repo has example code to run the tests parallel using TestNG.
+- The test runs on Andriod/IOS Proverbial App by LambdaTest
 - To run the test from command line use the following command:
-- `mvn clean install -Dusername=<lambdatest username> -Dtoken=<lambdatesttoken>`
+- `mvn clean install -DUSERNAME=<LambdaTest UserName> -DACCESSTOKEN=<LambdaTest ACCESS TOKEN>`
 
 ## :question: Need Assistance?
 
