@@ -15,7 +15,7 @@
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
+    </test>
     <test name="Proverbial app - Android Mobile Automation on Galaxy S9+">
         <parameter name="deviceId" value="2"/>
         <classes>
@@ -30,7 +30,7 @@
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
+    </test>
     <test name="Proverbial app - iOS Mobile Automation on iPhone 12 Pro">
         <parameter name="deviceId" value="3"/>
         <classes>
@@ -45,7 +45,7 @@
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
+    </test>
     <test name="Proverbial app - iOS Mobile Automation on iPhone 11">
         <parameter name="deviceId" value="4"/>
         <classes>
@@ -60,6 +60,5 @@
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
-
-</suite> <!-- Suite -->
+    </test>
+</suite>
