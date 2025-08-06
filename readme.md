@@ -9,7 +9,7 @@
 - This repo has example code to run the tests parallel using TestNG.
 - The test runs on Andriod/IOS Proverbial App by LambdaTest
 - To run the test from command line use the following command:
-- `mvn clean install -DUSERNAME=<LambdaTest UserName> -DACCESSTOKEN=<LambdaTest ACCESS TOKEN>`
+- `mvn clean install -DLT_USERNAME=<LambdaTest UserName> -DLT_ACCESS_KEY=<LambdaTest ACCESS TOKEN>`
 
 ## :question: Need Assistance?
 
