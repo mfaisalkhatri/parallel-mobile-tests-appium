@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -56,41 +57,36 @@ public class DriverManager {
 
     private DesiredCapabilities capabilities () {
         final DesiredCapabilities capabilities = new DesiredCapabilities ();
+        final HashMap<String, Object> ltOptions = new HashMap<> ();
         try (
             final var in = new FileInputStream (requireNonNull (getClass ().getClassLoader ()
                 .getResource ("parallel.config.json")).getPath ())) {
-
             final var objectMapper = new ObjectMapper ();
             final JsonNode jsonNode = objectMapper.readValue (in, JsonNode.class);
-
             final var devices = jsonNode.get ("deviceAndBuildCaps")
                 .elements ();
             devices.forEachRemaining (device -> {
                 if (device.get ("id")
                     .asText ()
                     .equals (this.deviceId)) {
-                    device.fields ()
-                        .forEachRemaining (capability -> {
+                    device.properties ()
+                        .forEach (capability -> {
                             if (!capability.getKey ()
                                 .equals ("id")) {
-                                capabilities.setCapability (capability.getKey (), capability.getValue ()
+                                ltOptions.put (capability.getKey (), capability.getValue ()
                                     .asText ());
                             }
                         });
                 }
             });
-
             final JsonNode capabilitiesNode = jsonNode.get ("commonCapabilities");
-            capabilitiesNode.fields ()
-                .forEachRemaining (capsEntry -> {
-                    final String commonCapsfieldName = capsEntry.getKey ();
-                    final String commonCapsfieldValue = capsEntry.getValue ()
-                        .asText ();
-                    capabilities.setCapability (commonCapsfieldName, commonCapsfieldValue);
-                });
+            capabilitiesNode.properties ()
+                .forEach (capsEntry -> ltOptions.put (capsEntry.getKey (), capsEntry.getValue ()
+                    .asText ()));
         } catch (final IOException e) {
             LOGGER.error ("Error reading the config json file", e);
         }
+        capabilities.setCapability ("lt:options", ltOptions);
         return capabilities;
     }
 

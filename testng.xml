@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Lambda tests Mobile automation test suite" parallel="tests" thread-count="4">
-    <test name="Proverbial app - Android Mobile Automation on Pixel 5">
+    <test name="Proverbial app - Android Mobile Automation on Pixel 9">
         <parameter name="deviceId" value="1"/>
         <classes>
             <class name="io.github.mfaisalkhatri.mobileautomation.tests.AndroidTests">
@@ -16,7 +16,7 @@
             </class>
         </classes>
     </test>
-    <test name="Proverbial app - Android Mobile Automation on Galaxy S9+">
+    <test name="Proverbial app - Android Mobile Automation on Galaxy S23 Ultra">
         <parameter name="deviceId" value="2"/>
         <classes>
             <class name="io.github.mfaisalkhatri.mobileautomation.tests.AndroidTests">
@@ -31,7 +31,7 @@
             </class>
         </classes>
     </test>
-    <test name="Proverbial app - iOS Mobile Automation on iPhone 12 Pro">
+    <test name="Proverbial app - iOS Mobile Automation on iPhone 14">
         <parameter name="deviceId" value="3"/>
         <classes>
             <class name="io.github.mfaisalkhatri.mobileautomation.tests.IOSTests">
@@ -46,7 +46,7 @@
             </class>
         </classes>
     </test>
-    <test name="Proverbial app - iOS Mobile Automation on iPhone 11">
+    <test name="Proverbial app - iOS Mobile Automation on iPhone 16">
         <parameter name="deviceId" value="4"/>
         <classes>
             <class name="io.github.mfaisalkhatri.mobileautomation.tests.IOSTests">

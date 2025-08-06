@@ -3,7 +3,10 @@
     "isRealMobile": true,
     "visual": true,
     "console": true,
-    "devicelog": true
+    "devicelog": true,
+    "w3c": true,
+    "autoGrantPermissions": true,
+    "autoAcceptAlerts": true
   },
   "deviceAndBuildCaps": [
     {
