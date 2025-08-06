@@ -1,7 +1,7 @@
 package io.github.mfaisalkhatri.mobileautomation.pages.ios;
 
-import io.appium.java_client.MobileBy;
-import io.github.mfaisalkhatri.drivers.DriverManager;
+import io.appium.java_client.AppiumBy;
+import io.github.mfaisalkhatri.mobileautomation.drivers.DriverManager;
 
 public class SpeedTestPage {
 
@@ -12,13 +12,13 @@ public class SpeedTestPage {
     }
 
     public String headerText () {
-        return driverManager.getDriver ()
-            .findElement (MobileBy.iOSClassChain ("**/XCUIElementTypeImage[`label == \"Speedtest\"`]"))
+        return this.driverManager.getDriver ()
+            .findElement (AppiumBy.iOSClassChain ("**/XCUIElementTypeImage[`label == \"Speedtest\"`]"))
             .getText ();
     }
 
     public void navigateToHomePage () {
-        driverManager.getDriver ()
+        this.driverManager.getDriver ()
             .navigate ()
             .back ();
     }

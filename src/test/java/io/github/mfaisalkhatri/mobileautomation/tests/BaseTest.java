@@ -1,6 +1,6 @@
 package io.github.mfaisalkhatri.mobileautomation.tests;
 
-import io.github.mfaisalkhatri.drivers.DriverManager;
+import io.github.mfaisalkhatri.mobileautomation.drivers.DriverManager;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;

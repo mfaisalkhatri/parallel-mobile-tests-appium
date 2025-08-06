@@ -9,43 +9,36 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <java.release.version>11</java.release.version>
-        <testng-version>7.6.0</testng-version>
-        <jackson-databind-version>2.13.3</jackson-databind-version>
-        <appium-java-version>7.6.0</appium-java-version>
-        <suite-xml>testng.xml</suite-xml>
-        <maven.source.encoding>UTF-8</maven.source.encoding>
-        <maven.compiler.version>3.8.1</maven.compiler.version>
-        <surefire-version>3.0.0-M5</surefire-version>
+        <appium-java-version>9.5.0</appium-java-version>
+        <testng-version>7.11.0</testng-version>
+        <jackson-databind-version>2.19.2</jackson-databind-version>
+        <lombok-version>1.18.38</lombok-version>
+        <log4j-core-version>2.25.1</log4j-core-version>
+        <log4j-api-version>2.25.1</log4j-api-version>
+        <maven.compiler.version>3.14.0</maven.compiler.version>
+        <surefire-version>3.5.3</surefire-version>
+        <java.release.version>17</java.release.version>
         <argLine>-Dfile.encoding=UTF-8 -Xdebug -Xnoagent</argLine>
-        <lombok-version>1.18.24</lombok-version>
-        <log4j-core-version>2.18.0</log4j-core-version>
-        <log4j-api-version>2.18.0</log4j-api-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <suite-xml>testng.xml</suite-xml>
     </properties>
-
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng-version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-databind-version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>${appium-java-version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -57,15 +50,12 @@
             <artifactId>log4j-core</artifactId>
             <version>${log4j-core-version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>${log4j-api-version}</version>
         </dependency>
-
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
